@@ -1,9 +1,170 @@
-body{ font-family: Inter, system-ui, sans-serif; background:#f6f8fa; color:#111 }
-nav.nav{ display:flex; justify-content:space-between; padding:12px 20px; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
-nav.nav a{ margin-right:12px }
-.card{ background:#fff; padding:12px; border-radius:8px; margin:8px 0 }
-.card-small{ background:#fff; padding:6px; border-radius:6px; margin:6px 0; cursor:grab }
-.planner{ width:100%; border-collapse:collapse }
-.planner td, .planner th{ border:1px solid #eee; padding:8px }
-input, select{ display:block; margin:8px 0; padding:8px }
-button{ padding:8px 12px; margin:6px 6px 0 0 }
+/* 🌿 Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f9fafb;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🌐 Navbar */
+nav.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav.nav a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav.nav a:hover {
+  color: #2b7a78;
+}
+
+nav.nav button {
+  background: #2b7a78;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+nav.nav button:hover {
+  background: #205c5a;
+}
+
+/* 🪶 Forms and Cards */
+.card {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #2b7a78;
+}
+
+input,
+select,
+button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+button {
+  background: #2b7a78;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #205c5a;
+}
+
+/* 🥗 Recipe List */
+ul {
+  list-style: none;
+}
+
+.card-small {
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 8px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  transition: transform 0.2s;
+}
+
+.card-small:hover {
+  transform: scale(1.02);
+}
+
+/* 📅 Meal Planner Table */
+.planner {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.planner th,
+.planner td {
+  border: 1px solid #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+.planner th {
+  background: #2b7a78;
+  color: #fff;
+}
+
+.planner td em {
+  color: #aaa;
+}
+
+/* 🛒 Grocery List */
+ul li {
+  background: #fff;
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+}
+
+ul li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  nav.nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .planner th,
+  .planner td {
+    padding: 6px;
+  }
+}
